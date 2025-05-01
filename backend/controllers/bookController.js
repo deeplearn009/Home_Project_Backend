@@ -6,8 +6,8 @@ const getBooks = async (req, res) => {
 }
 
 const postBooks = async (req, res) => {
-    const {name, author, price} = req.body
-    const book = {name, author, price}
+    const {image, name, author, price} = req.body
+    const book = {image, name, author, price}
     await BookModel.create(book)
     res.json(book)
 }

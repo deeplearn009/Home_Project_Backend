@@ -6,8 +6,8 @@ const getWish = async (req, res) => {
 }
 
 const postWish = async (req, res) => {
-    const {name, author, price} = req.body
-    const wish = {name, author, price}
+    const {image, name, author, price} = req.body
+    const wish = {image, name, author, price}
     await WishModel.create(wish)
     res.json(wish)
 }
