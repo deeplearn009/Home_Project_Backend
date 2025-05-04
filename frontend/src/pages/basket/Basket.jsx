@@ -18,7 +18,7 @@ const Basket = () => {
   
   return (
     <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
-      {data?.map(item => <Card item={item} btn={"basket"}/>)}
+      {data?.map((item, i) => <Card key={Math.random() * i} item={item} btn={"basket"}/>)}
     </div>
   )
 }
